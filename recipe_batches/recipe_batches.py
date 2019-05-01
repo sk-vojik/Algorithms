@@ -3,7 +3,18 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  pass 
+  batch = {}
+  for k, v in recipe.items():
+    if k not in ingredients:
+      return 0
+    batch[k] = ingredients[k] // v 
+  
+  return min(batch.values())
+  
+  
+  # iterate through recipe dict, get values
+
+
 
 
 if __name__ == '__main__':
